@@ -294,6 +294,12 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 1em;
+      li {
+        a {
+          opacity: 0.7;
+          transition: opacity 0.3s ease;
+        }
+      }
     }
     .icons {
       align-self: center;
@@ -305,6 +311,199 @@ footer {
         width: 16px;
         height: 16px;
         border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (width>425px) {
+  header {
+    padding: 6em;
+    background: $headerBgColor url(images/bg-curvy-desktop.svg) bottom no-repeat;
+    background-size: contain;
+    .top {
+      .logo {
+        width: 15%;
+      }
+      nav {
+        ul {
+          gap: 4em;
+          font-size: 1.2em;
+        }
+      }
+    }
+    .content {
+      h1 {
+        font-size: 3em;
+        width: 60%;
+      }
+      p {
+        width: 50%;
+        font-size: 1.5em;
+      }
+      button {
+        width: 20%;
+        font-size: 1.25em;
+        padding: 0.75em;
+        cursor: pointer;
+      }
+      button:hover {
+        background: linear-gradient(
+          to right,
+          hsl(176, 40%, 64%),
+          hsl(198, 20%, 55%)
+        );
+      }
+    }
+  }
+  main {
+    .benefits {
+      ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        padding: 0 15%;
+        gap: 5em 10em;
+      }
+    }
+    .productive {
+      display: flex;
+      align-items: center;
+      gap: 5em;
+      padding: 0 6em;
+      .img-wrapper {
+        width: 50%;
+      }
+      .text {
+        width: 50%;
+        h2 {
+          font-size: 2.75em;
+          padding-right: 4em;
+        }
+        p {
+          padding-right: 3em;
+        }
+        button {
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        button:hover {
+          color: $white;
+          border-bottom-color: $white;
+        }
+      }
+    }
+    .testimonials {
+      margin: 10em 10em 1em;
+      padding: 3em 0.5em 0;
+      background-size: 5%;
+      background-position: top left;
+      ul {
+        flex-direction: row;
+        gap: 3em;
+        li {
+          padding-top: 3em;
+          gap: 2em;
+          p {
+            font-size: 1em;
+            padding-right: 0.25em;
+          }
+          .profile {
+            .avatar {
+              width: 10%;
+            }
+            .info {
+              .name {
+                font-size: 0.75em;
+              }
+              .role {
+                font-size: 0.6em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .access {
+      width: 60%;
+      margin: 0 auto;
+      padding: 2em 6em 3em;
+      h2 {
+        font-size: 2.5em;
+      }
+      p {
+        padding: 0 5%;
+        font-size: 1em;
+      }
+      .form-group {
+        flex-direction: row;
+        .input {
+          width: 70%;
+          input {
+            padding: 1em 2.5em;
+          }
+          p {
+            position: absolute;
+          }
+        }
+        button {
+          width: 30%;
+          font-size: 1em;
+          cursor: pointer;
+        }
+        button:hover {
+          background: linear-gradient(
+            to right,
+            hsl(176, 40%, 64%),
+            hsl(198, 20%, 55%)
+          );
+        }
+      }
+    }
+  }
+  footer {
+    padding: 14em 10em 3em;
+    .logo {
+      width: 15%;
+    }
+    .links {
+      flex-direction: row;
+      justify-content: space-between;
+      .address {
+        margin: unset;
+        width: 50%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 30px 30px;
+        column-gap: 5em;
+        row-gap: 1em;
+        align-items: center;
+        .line:first-of-type {
+          grid-row: span 2;
+        }
+      }
+      ul {
+        li {
+          a:hover {
+            opacity: 1;
+          }
+        }
+      }
+      .icons {
+        align-self: flex-start;
+        .icon {
+          cursor: pointer;
+          transition: all 0.3s ease;
+          path {
+            transition: all 0.3s ease;
+          }
+        }
+        .icon:hover {
+          border-color: hsl(176, 68%, 64%);
+          path {
+            color: hsl(176, 68%, 64%);
+          }
+        }
       }
     }
   }
