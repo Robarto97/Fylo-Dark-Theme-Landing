@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+$mainBgColor: hsl(218, 28%, 13%);
+$footerBgColor: hsl(216, 53%, 9%);
+$testimonialsBgColor: hsl(219, 30%, 18%);
+$headerBgColor: hsl(217, 28%, 15%);
+$lightRed: hsl(0, 100%, 63%);
+$gradient: hsl(176, 68%, 64%), hsl(198, 60%, 50%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+button,
+nav {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background: url(images/bg-curvy-mobile.svg) top 55% right,
+    linear-gradient($headerBgColor 64%, $mainBgColor 36%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2em 1.5em;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      width: 25%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    nav {
+      ul {
+        display: flex;
+        gap: 1.5em;
+        li {
+          font-size: 1.1em;
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5em;
+    margin-top: 4em;
+    .img-wrapper {
+      margin-bottom: 1em;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    h1 {
+      line-height: 1.5;
+    }
+    p {
+      font-size: 1.25em;
+      padding: 0 0.25em;
+    }
+    button {
+      width: 75%;
+      font-family: inherit;
+      font-weight: 700;
+      background-image: linear-gradient(to right, $gradient);
+      border: none;
+      padding: 1em;
+      border-radius: 2em;
+      font-size: 1em;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+main {
+  background-color: $mainBgColor;
+  padding: 5em 1.5em 1em;
+  .benefits {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5em;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+        img {
+          margin-bottom: 1.5em;
+        }
+        p {
+          font-size: 1.15em;
+          padding: 0 0.5em;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+  .productive {
+    margin-top: 8em;
+    .img-wrapper {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+      margin-top: 3em;
+      p {
+        font-size: 1.15em;
+        padding-right: 0.5em;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding: 0.25em 0;
+        color: hsl(198, 60%, 50%);
+        border-bottom: 2px solid hsl(198, 60%, 50%);
+        font-size: 1em;
+      }
+    }
+  }
+  .testimonials {
+    margin: 10em 2em 1em;
+    padding-top: 2em;
+    background: url(images/bg-quotes.png) no-repeat;
+    background-size: 10%;
+    background-position: top left 3%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        background-color: $testimonialsBgColor;
+        padding: 2em;
+        border-radius: 0.5em;
+        p {
+          font-size: 0.85em;
+          line-height: 1.8;
+        }
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 1em;
+          .avatar {
+            width: 13%;
+            overflow: hidden;
+            border-radius: 50%;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+          .info {
+            .name {
+              font-weight: 700;
+              letter-spacing: 1px;
+            }
+            .role {
+              opacity: 0.7;
+              font-size: 0.75em;
+            }
+          }
+        }
+      }
+    }
+  }
+  .access {
+    background-color: $headerBgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 5px 1px black;
+    transform: translateY(50%);
+    p {
+      font-size: 1.15em;
+    }
+    .form-group {
+      width: 100%;
+      margin-top: 1.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          font-size: 1.1em;
+          padding: 1em 1.5em;
+          border-radius: 2em;
+          color: black;
+          border: none;
+        }
+        input::placeholder {
+          opacity: 0.5;
+          font-size: 0.85em;
+        }
+        input:focus {
+          outline: none;
+        }
+        .error {
+          color: $lightRed;
+          font-size: 0.9em;
+          margin-top: 0.25em;
+          text-align: left;
+          display: none;
+        }
+        .error.show {
+          display: block;
+        }
+      }
+      button {
+        width: 100%;
+        background-image: linear-gradient(to right, $gradient);
+        border: none;
+        border-radius: 2em;
+        padding: 1em;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+footer {
+  background-color: $footerBgColor;
+  padding: 16em 2em 3em;
+  .logo {
+    width: 55%;
+    margin-left: 0.75em;
+    margin-bottom: 3em;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    .address {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      margin-bottom: 1em;
+      .line {
+        display: grid;
+        grid-template-columns: 40px auto;
+        align-items: center;
+      }
+      .line:first-of-type {
+        align-items: start;
+        img {
+          margin-top: 0.25em;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    .icons {
+      align-self: center;
+      display: flex;
+      gap: 1em;
+      .icon {
+        border: 1px solid $white;
+        padding: 0.5em;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
